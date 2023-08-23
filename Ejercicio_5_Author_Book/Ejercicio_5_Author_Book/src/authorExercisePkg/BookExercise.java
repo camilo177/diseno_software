@@ -1,19 +1,18 @@
 package authorExercisePkg;
 
+
 public class BookExercise {
     public BookExercise(){
     }
 
     public static void main(String[] args) {
-        Book bookOne = new Book();
+        // Author instance
+        Author authorOne = new Author("Tolkien", "tolkien@whatever.com", 'm');
 
-        bookOne.setPrice(12000);
-        bookOne.setQty(5);
-        bookOne.setTitle("The Lord of the Rings");
-        bookOne.setName("Tolkien");
-        bookOne.setGender('m');
-        bookOne.setEmail("tolkien@whatever.com");
+        // Book instance using the Author instance
+        Book bookOne = new Book("The Lord of the Rings", authorOne, 12000, 5);
 
-        System.out.println((bookOne.toString()));
+        System.out.println(bookOne);
     }
 }
+

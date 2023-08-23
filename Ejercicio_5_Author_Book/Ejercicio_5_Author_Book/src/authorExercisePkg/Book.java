@@ -1,25 +1,36 @@
 package authorExercisePkg;
 
-public class Book extends Author {
-    private String title;
+public class Book {
+    private String name;
+    private Author author;
     private double price;
     private int qty;
 
-    public Book(){
-        //Constructor
+    public Book(String name, Author author, double price) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
     }
+
+    public Book(String name, Author author, double price, int qty) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+        this.qty = qty;
+    }
+
     //Methods
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return this.name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public Author getAuthor(){
+        return this.author;
     }
 
     public double getPrice() {
-        return price;
+        return this.price;
     }
 
     public void setPrice(double price) {
@@ -27,7 +38,7 @@ public class Book extends Author {
     }
 
     public int getQty() {
-        return qty;
+        return this.qty;
     }
 
     public void setQty(int qty) {
@@ -36,7 +47,11 @@ public class Book extends Author {
 
     @Override
     public String toString() {
-        return "Book: " + getTitle() + " - Author´s info" + " -name: "  + getName() + " -email: " + getEmail() +
-                " -gender: " + getGender() + ", price:" + getPrice() + ", quantity: " + getQty();
+        return "Book info: " +
+                "name='" + name + '\'' +
+                ", author=" + author.getName() +  // Author's getName()
+                ", price=" + price +
+                ", qty=" + qty;
     }
 }
+

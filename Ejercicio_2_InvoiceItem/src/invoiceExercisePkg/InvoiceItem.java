@@ -6,16 +6,19 @@ public class InvoiceItem {
     private int qty;
     private double unitPrice;
 
-    public InvoiceItem(){
-        //Constructor
+    public InvoiceItem() {
+        this.id = id;
+        this.desc = desc;
+        this.qty = qty;
+        this.unitPrice = unitPrice;
     }
     //Methods
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getDesc() {
-        return desc;
+        return this.desc;
     }
 
     public void setDesc(String desc) {
@@ -23,7 +26,7 @@ public class InvoiceItem {
     }
 
     public int getQty() {
-        return qty;
+        return this.qty;
     }
 
     public void setQty(int qty) {
@@ -31,7 +34,7 @@ public class InvoiceItem {
     }
 
     public double getUnitPrice() {
-        return unitPrice;
+        return this.unitPrice;
     }
 
     public void setUnitPrice(double unitPrice) {
@@ -39,11 +42,16 @@ public class InvoiceItem {
     }
 
     public double getTotal(){
-        return unitPrice*qty;
+        return this.unitPrice*this.qty;
     }
 
-    public String toString(){
-        return "ID: " + getId() + ", desc: " + getDesc() + ", qty: "
-                + getQty() + ", price: " + getUnitPrice();
+    @Override
+    public String toString() {
+        return "InvoiceItem{" +
+                "id='" + id + '\'' +
+                ", desc='" + desc + '\'' +
+                ", qty=" + qty +
+                ", unitPrice=" + unitPrice +
+                '}';
     }
 }

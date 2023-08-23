@@ -5,16 +5,15 @@ public class EmployeeExercise {
     }
 
     public static void main(String[] args) {
-        Employee employeeOne = new Employee();
+        Employee employeeOne = new Employee(1, "Daniel", "Jaramillo", 1200000);
 
-        employeeOne.setFirstName("Daniel");
-        employeeOne.setLastName("Silva");
 
         System.out.println("El nombre completo es: " + employeeOne.getName());
 
         employeeOne.setSalary(1200000);
+        System.out.println("El salario anual es: " + employeeOne.getAnnualSalary());
         System.out.println("El salario con incremento del 10% es: " + employeeOne.raiseSalary(10));
 
-        System.out.println(employeeOne.toString());
+        System.out.println(employeeOne);
     }
 }

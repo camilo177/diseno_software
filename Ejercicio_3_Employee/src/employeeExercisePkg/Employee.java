@@ -5,37 +5,35 @@ public class Employee {
     private String firstName;
     private String lastName;
     private int salary;
-    public Employee(){
-        //Constructor
+
+    //Constructor
+    public Employee(int id, String firstName, String lastName, int salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
     }
+
     //Methods
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        return this.firstName;
     }
 
 
     public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+        return this.lastName;
     }
 
     public String getName() {
-        return firstName + " " + lastName;
+        return this.firstName + " " + this.lastName;
     }
 
     public int getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public void setSalary(int salary) {
@@ -43,15 +41,20 @@ public class Employee {
     }
 
     public int getAnnualSalary() {
-        return salary*12;
+        return this.salary*12;
     }
 
     public int raiseSalary(int percent){
-        return salary + ((salary * percent)/100);
+        return this.salary + ((this.salary * percent)/100);
     }
 
-    public String toString(){
-        return "ID: " + getId() + ", Name: " + getName() + ", Salary: " + getSalary();
+    @Override
+    public String toString() {
+        return "Employee info" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary;
     }
 
 }

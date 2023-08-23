@@ -6,12 +6,13 @@ public class InvoiceItem {
     private int qty;
     private double unitPrice;
 
-    public InvoiceItem() {
+    public InvoiceItem(String id, String desc, int qty, double unitPrice) {
         this.id = id;
         this.desc = desc;
         this.qty = qty;
         this.unitPrice = unitPrice;
     }
+
     //Methods
     public String getId() {
         return this.id;

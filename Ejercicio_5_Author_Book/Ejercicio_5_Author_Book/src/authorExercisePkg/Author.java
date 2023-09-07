@@ -5,17 +5,16 @@ public class Author {
     private String email;
     private char gender;
 
-    public Author(){
-        //Constructor
+    public Author(String name, String email, char gender) {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
     }
-    //Methods
+
+//Methods
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {
@@ -30,12 +29,12 @@ public class Author {
         return gender;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
-
-    public String toString(){
-        return "Author: " + getName() + ", gender: " + getGender() +
-                ", email: " + getEmail();
+    @Override
+    public String toString() {
+        return "Author´s info: " +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", gender=" + gender +
+                '}';
     }
 }

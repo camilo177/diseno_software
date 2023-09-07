@@ -5,56 +5,63 @@ public class Account {
     private String name;
     private int balance;
 
-    public Account(){
-        //Constructor
+    //Constructors
+    public Account(String id, String name) {
+        this.id = id;
+        this.name = name;
     }
+
+    public Account(String id, String name, int balance) {
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
+    }
+
     //Methods
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getBalance() {
-        return balance;
+        return this.balance;
     }
 
     public int credit(int amount) {
-        balance = balance + amount;
+        balance = this.balance + amount;
         return  balance;
     }
 
     public int debit(int amount) {
-        if (amount <= balance) {
-            balance = balance - amount;
+        if (amount <= this.balance) {
+            balance = this.balance - amount;
         }
         else {
             System.out.println("Amount exceeded balance");
         }
-        return balance;
+        return this.balance;
     }
 
+    //In this case there aren´t more accounts, thus, it only prints message (not operational)
     public int transferTo(int anotherAccount, int amount) {
-        if (amount < balance){
+        if (amount < this.balance){
             System.out.println("Money was transfered to: " + anotherAccount);
         }
         else {
             System.out.println("Amount exceeded balance");
         }
-        return balance;
-    }
-    public String toString(){
-        return "ID: " + getId() + ", name: " + getName() + ", balance: "
-                + getBalance();
+        return this.balance;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }

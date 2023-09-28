@@ -18,10 +18,14 @@ public class Main {
         int anoPublicacionLibro = scanner.nextInt();
 
         Libro libro = new Libro(tituloLibro, precioLibro, numeroPaginas, anoPublicacionLibro);
+        libro.setNumeroPaginas(numeroPaginas);
+        libro.setPrecio(precioLibro);
+        libro.setTitulo(tituloLibro);
+        libro.setAnoPublicacion(anoPublicacionLibro);
 
         // Input for Disco
         System.out.println("\nIngrese los datos del disco:");
-        scanner.nextLine();  // Consume the newline character
+        scanner.nextLine();
         System.out.print("Título: ");
         String tituloDisco = scanner.nextLine();
         System.out.print("Precio: ");
@@ -30,7 +34,9 @@ public class Main {
         float duracionDisco = scanner.nextFloat();
 
         Disco disco = new Disco(tituloDisco, precioDisco, duracionDisco);
-
+        disco.setPrecio(precioDisco);
+        disco.setDuracion(duracionDisco);
+        disco.setTitulo(tituloDisco);
         // Display the information
         System.out.println("\nInformación del Libro:");
         System.out.println(libro);

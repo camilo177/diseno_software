@@ -24,7 +24,8 @@ public class Main {
         String codigoPostal = scanner.nextLine();
 
         Direccion direccion = new Direccion(nombre, primerApellido, segundoApellido, calle, ciudad, provincia, codigoPostal);
-
+        direccion.setCalle(calle);
+        direccion.setNombre(nombre, primerApellido, segundoApellido);
         // Mostrar los detalles de la dirección
         System.out.println("\nDetalles de la Dirección:");
         System.out.println(direccion);

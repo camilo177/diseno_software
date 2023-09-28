@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Crear un objeto de Dirección
+        // Input for Direccion
         System.out.println("Ingrese los datos de la dirección:");
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
@@ -23,13 +23,18 @@ public class Main {
         System.out.print("Código Postal: ");
         String codigoPostal = scanner.nextLine();
 
+        // Create an instance of Direccion
         Direccion direccion = new Direccion(nombre, primerApellido, segundoApellido, calle, ciudad, provincia, codigoPostal);
-        direccion.setCalle(calle);
-        direccion.setNombre(nombre, primerApellido, segundoApellido);
-        // Mostrar los detalles de la dirección
+
+        // Methods
+        direccion.nuevaDireccion(ciudad, calle, provincia, codigoPostal);
+        direccion.nuevoNombre(nombre, primerApellido, segundoApellido);
+
+        // Display the details of the direccion
         System.out.println("\nDetalles de la Dirección:");
         System.out.println(direccion);
 
         scanner.close();
     }
 }
+

@@ -4,7 +4,6 @@ public class Remolque {
     private double peso;
 
     //Constructor
-
     public Remolque() {
     }
 
@@ -19,6 +18,7 @@ public class Remolque {
     public void setPeso(double peso) {
         this.peso = peso;
     }
+
 
     @Override
     public String toString() {

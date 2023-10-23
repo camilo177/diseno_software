@@ -45,7 +45,7 @@ public class Vendedor extends Empleado{
     }
 
     @Override
-    public void incrementarSalario(double aumentoPorcentaje) {
+    public void incrementarSalario() {
         double aumentoAnual = getSalario() * 0.1;
 
         // Incrementar salario

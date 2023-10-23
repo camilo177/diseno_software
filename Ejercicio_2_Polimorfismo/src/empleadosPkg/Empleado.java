@@ -109,7 +109,8 @@ public class Empleado {
         this.supervisor = nuevoSupervisor;
     }
 
-    public void incrementarSalario(double aumentoPorcentaje) {
+    public void incrementarSalario() {
+        double aumentoPorcentaje = 0;
         if (aumentoPorcentaje > 0) {
             double aumento = salario * (aumentoPorcentaje / 100.0);
             salario += aumento;

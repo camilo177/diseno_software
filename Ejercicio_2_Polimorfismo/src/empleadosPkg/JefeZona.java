@@ -8,13 +8,6 @@ public class JefeZona extends Empleado{
     private Coche coche;
 
     //Constructor
-    public JefeZona(String despacho, Secretario secretario, Vendedor[] listaVendedores, Coche coche) {
-        this.despacho = despacho;
-        this.secretario = secretario;
-        this.listaVendedores = listaVendedores;
-        this.coche = coche;
-    }
-
     public JefeZona(String nombre, String apellido, int DNI, String direccion, int telefono, double salario, String despacho, Secretario secretario, Vendedor[] listaVendedores, Coche coche) {
         super(nombre, apellido, DNI, direccion, telefono, salario);
         this.despacho = despacho;
@@ -75,7 +68,7 @@ public class JefeZona extends Empleado{
     }
 
     @Override
-    public void incrementarSalario(double aumentoPorcentaje) {
+    public void incrementarSalario() {
         double aumentoAnual = getSalario() * 0.2;
 
         // Incrementar salario

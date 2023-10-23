@@ -53,7 +53,7 @@ public class Secretario extends Empleado {
 
 
     @Override
-    public void incrementarSalario(double aumentoPorcentaje) {
+    public void incrementarSalario() {
       double aumentoAnual = getSalario() * 0.05;
 
         // Incrementar salario

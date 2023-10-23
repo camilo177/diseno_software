@@ -17,30 +17,37 @@ public class Main {
                 new Vendedor[]{vendedor1}, coche1);
 
 
-        System.out.println("Jefe Zona: ");
+        //Jefe de zona inicial
         System.out.println(jefeZona1);
-
         // Cambiar secretario
         Secretario newSecretario = new Secretario("Despacho3", 67890);
         jefeZona1.cambiarSecretario(newSecretario);
-        System.out.println("JefeZona con nuevo secretario:");
-        System.out.println(jefeZona1);
+
 
         // Cambiar coche
         Coche newCoche = new Coche("XYZ789", "Honda", "Civic");
         jefeZona1.cambiarCoche(newCoche);
-        System.out.println("JefeZona con cambio de carro:");
-        System.out.println(jefeZona1);
+
 
         // Nuevo vendedor
         Vendedor newVendedor = new Vendedor(coche1, "67890", "Area2", 0.03, new Cliente[]{cliente2});
         jefeZona1.darDeAltaVendedor(newVendedor);
-        System.out.println("JefeZona con nuevo vendedor:");
-        System.out.println(jefeZona1);
+
 
         // Quitar a Vendedor
         jefeZona1.darDeBajaVendedor(vendedor1);
-        System.out.println("JefeZona sin vendedor:");
+        System.out.println("JefeZona con cambios:");
         System.out.println(jefeZona1);
+
+        //Aumentar salario
+        System.out.println("Salario inicial vendedor: " +vendedor1.getSalario());
+        vendedor1.incrementarSalario();
+        System.out.println("Salario final vendedor: " + vendedor1.getSalario());
+        System.out.println("Salario inicial secretario: " +secretario1.getSalario());
+        secretario1.incrementarSalario();
+        System.out.println("Salario final secretario: " + secretario1.getSalario());
+        System.out.println("Salario inicial jefe de zona: " +jefeZona1.getSalario());
+        jefeZona1.incrementarSalario();
+        System.out.println("Salario final jefe de zona: " + jefeZona1.getSalario());
     }
 }
